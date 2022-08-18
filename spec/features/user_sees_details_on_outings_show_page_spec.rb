@@ -36,7 +36,15 @@ RSpec.describe 'When I visit an outings show page' do
       expect(page).to have_content(outing_3.location)
       expect(page).to have_content(outing_3.date)
       expect(page).to have_content("Count of Contestants: #{outing_3.contestants.count}")
-      expect(page).to have_content("Contestants: #{con_1.name}, #{con_2.name}, #{con_4.name}")
+      expect(page).to have_content("Contestants: #{con_1.name} #{con_2.name} #{con_4.name}")
+
+      visit "/outings/#{outing_4.id}"
+
+      expect(page).to have_content(outing_4.name)
+      expect(page).to have_content(outing_4.location)
+      expect(page).to have_content(outing_4.date)
+      expect(page).to have_content("Count of Contestants: #{outing_4.contestants.count}")
+      expect(page).to have_content("Contestants: #{con_1.name} #{con_2.name} #{con_3.name} #{con_4.name}")
     end
   end
 end
