@@ -3,3 +3,4 @@
 <% @contestants.each do |contestant| %>
   <li>Name: <%= link_to "#{contestant.name}", "/contestants/#{contestant.id}" %>, Age: <%= contestant.age %>, Hometown: <%= contestant.hometown %></li>
 <% end %>
+<p>These Contestants are from these hometowns:

@@ -14,10 +14,10 @@ RSpec.describe 'When I visit a bachelorette contestants index page' do
 
     visit "/bachelorettes/#{bach.id}/contestants"
 
-    expect(page).to have_content("These Contestants are from these hometowns: #{con_1.hometown} #{con_2.hometown} #{con_3.hometown}")
+    expect(page).to have_content("#{con_1.hometown} #{con_2.hometown}")
 
     visit "/bachelorettes/#{bach_2.id}/contestants"
 
-    expect(page).to have_content("These Contestants are from these hometowns: #{con_4.hometown} #{con_5.hometown}")
+    expect(page).to have_content("These Contestants are from these hometowns: #{con_4.hometown}")
   end
-end 
+end
