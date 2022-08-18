@@ -15,7 +15,6 @@ RSpec.describe 'When I visit a bachelorette contestants index' do
 
       visit "/bachelorettes/#{bach.id}"
       click_on 'Contestants'
-
       click_on 'Mike Tyson'
 
       expect(current_path).to eq("/contestants/#{con_3.id}")
