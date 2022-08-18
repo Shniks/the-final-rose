@@ -18,17 +18,17 @@ RSpec.describe 'When I visit a contestant show page' do
       outing_3 = Outing.create!(name: 'Helicpoter Ride', location: 'Las Vegas', date: '08/14/2022')
       outing_4 = Outing.create!(name: 'Hiking', location: 'Zion', date: '08/15/2022')
 
-      ContestantOutings.create!(contestant_id: con_1.id, outing_id: outing_1.id)
-      ContestantOutings.create!(contestant_id: con_1.id, outing_id: outing_3.id)
-      ContestantOutings.create!(contestant_id: con_1.id, outing_id: outing_4.id)
-      ContestantOutings.create!(contestant_id: con_2.id, outing_id: outing_3.id)
-      ContestantOutings.create!(contestant_id: con_2.id, outing_id: outing_4.id)
-      ContestantOutings.create!(contestant_id: con_3.id, outing_id: outing_1.id)
-      ContestantOutings.create!(contestant_id: con_3.id, outing_id: outing_2.id)
-      ContestantOutings.create!(contestant_id: con_3.id, outing_id: outing_4.id)
-      ContestantOutings.create!(contestant_id: con_4.id, outing_id: outing_2.id)
-      ContestantOutings.create!(contestant_id: con_4.id, outing_id: outing_3.id)
-      ContestantOutings.create!(contestant_id: con_4.id, outing_id: outing_4.id)
+      ContestantOuting.create!(contestant_id: con_1.id, outing_id: outing_1.id)
+      ContestantOuting.create!(contestant_id: con_1.id, outing_id: outing_3.id)
+      ContestantOuting.create!(contestant_id: con_1.id, outing_id: outing_4.id)
+      ContestantOuting.create!(contestant_id: con_2.id, outing_id: outing_3.id)
+      ContestantOuting.create!(contestant_id: con_2.id, outing_id: outing_4.id)
+      ContestantOuting.create!(contestant_id: con_3.id, outing_id: outing_1.id)
+      ContestantOuting.create!(contestant_id: con_3.id, outing_id: outing_2.id)
+      ContestantOuting.create!(contestant_id: con_3.id, outing_id: outing_4.id)
+      ContestantOuting.create!(contestant_id: con_4.id, outing_id: outing_2.id)
+      ContestantOuting.create!(contestant_id: con_4.id, outing_id: outing_3.id)
+      ContestantOuting.create!(contestant_id: con_4.id, outing_id: outing_4.id)
 
       visit "/contestants/#{con_3.id}"
 
