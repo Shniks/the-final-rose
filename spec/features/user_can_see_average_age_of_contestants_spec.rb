@@ -12,8 +12,8 @@ RSpec.describe 'When I visit a bachelorette show page' do
     con_4 = bach_2.contestants.create!(name: 'Chris Pratt', age: 23, hometown: 'Irving, TX')
     con_5 = bach_2.contestants.create!(name: 'Trevor Noah', age: 35, hometown: 'Denver, CO')
 
-    average_1 = (con_1.age + con_2.age + con_3.age) / 3
-    average_2 = (con_4.age + con_5.age) / 2
+    average_1 = ((con_1.age + con_2.age + con_3.age) / 3.0).round(1)
+    average_2 = ((con_4.age + con_5.age) / 2.0).round(1)
 
     visit "/bachelorettes/#{bach.id}"
 
