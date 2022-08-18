@@ -36,6 +36,26 @@ RSpec.describe 'When I visit the bachelorette show page' do
         expect(page).to_not have_content(con_4.name)
         expect(page).to_not have_content(con_4.age)
         expect(page).to_not have_content(con_5.hometown)
+
+        visit "/bachelorettes/#{bach_2.id}"
+
+        expect(page).to have_content(bach_2.name)
+        expect(page).to have_content(bach_2.season_number)
+        expect(page).to have_content(bach_2.description)
+        expect(page).to have_link('Contestants')
+
+        click_on 'Contestants'
+
+        expect(current_path).to eq("/bachelorettes/#{bach_2.id}/contestants")
+        expect(page).to have_content(con_4.name)
+        expect(page).to have_content(con_4.age)
+        expect(page).to have_content(con_4.hometown)
+        expect(page).to have_content(con_5.name)
+        expect(page).to have_content(con_5.age)
+        expect(page).to have_content(con_5.hometown)
+        expect(page).to_not have_content(con_1.name)
+        expect(page).to_not have_content(con_2.name)
+        expect(page).to_not have_content(con_3.name)
       end
     end
   end
